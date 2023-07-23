@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} flavorship members {% endblock %} 
+
+{% block content %}
+
+<body>
+    <h1>flavorship members</h1>
+
+    <div class="container">
+        <div class="row">
+            <ul>
+                {% for entry in entries %}
+                <div class="col-md-4">
+                    <li> {{ entry[0] }}, {{ entry [3]}}   </li>
+                </div> 
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+</body>
+
+{% endblock %}

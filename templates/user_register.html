@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}  Sign Up {% endblock %} 
+
+{% block content %}
+<body>
+    <form action="/user_register" method="POST" enctype="multipart/form-data">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <small class="text-body-secondary"> You need to fill all fields that are marked with * to continue. </small>
+          <hr>
+
+          <label for="name"><b>Name*</b></label>
+          <input type="text" placeholder="Name" name="name" pattern="([^\s][A-z0-9À-ž\s]+)" required>
+      
+          <label for="email"><b>Email*</b></label>
+          <input type="text" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+      
+          <label for="psw"><b>Password*</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="location"><b>Location*</b></label>
+          <input type="text" placeholder="Location" name="location" pattern="[A-Za-z]{1,100}" required>
+
+    
+        <small class="text-body-secondary">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></small>
+        
+        <div class="form__fieldset">
+            <input class="form__submit form__input" type="submit" value="Sign Up" formmethod="post"/>
+        </div>
+
+         
+        </div>
+      </form>
+</body>
+
+{% endblock %}
